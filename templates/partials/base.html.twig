@@ -4,7 +4,7 @@
 <head>
   {% block head %}
     <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% if header.title %}{{ header.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
     <link rel="icon" type="image/png" href="{{ url('theme://images/logo.png') }}" />
     <link rel="canonical" href="{{ page.url(true, true) }}" />
@@ -29,8 +29,8 @@
   <div id="header" >
     {% block header %}
     <div class="horizontal-center">
-      <h1>{{ page.header }}</h2>
-      <p>{{ page.description }}</p>
+      <h1>{{ page.header.header }}</h2>
+      <p>{{ page.header.description }}</p>
     </div>
     {% endblock header %}
   </div>

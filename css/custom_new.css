@@ -5,16 +5,34 @@ body {
 
 #navigation {
   max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#navigation ul {
+  display: inline-block;
+  list-style: none;
 }
 
 #header {
   max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
 }
+
 
 #content {
   max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #footer {
   max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.horizontal-center {
+  text-align: center;
 }

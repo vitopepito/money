@@ -4,7 +4,7 @@ body {
 
 #navigation {
   max-width: 1200px;
-  margin-left: 0px auto 0px auto;
+  margin: 0px auto 0px auto;
   padding: 0px 1em 0px 1em;
   height: 60px;
 }
@@ -12,11 +12,29 @@ body {
 #navigation ul {
   display: inline-block;
   list-style: none;
+  list-style-type: none;
+}
+#navigation li {
+  float: left;
+}
+#navigation li a {
+  display: block;
+  padding: 1em 2em;
+  text-decoration: none;
+}
+#navigation li a:hover {
+  font-weight: bold;
+}
+#navigation li a .active {
+  font-weight: bold;
+}
+#logo {
+  width: 60px;
 }
 
 #header {
   max-width: 960px;
-  margin-left: 0px auto 0px auto;
+  margin: 0px auto 0px auto;
   padding: 0px 1em 0px 1em;
   height: 220px;
 }
@@ -24,13 +42,13 @@ body {
 
 #content {
   max-width: 960px;
-  margin-left: 0px auto 0px auto;
+  margin: 0px auto 0px auto;
   padding: 0px 1em 0px 1em;
 }
 
 #footer {
   max-width: 1200px;
-  margin-left: 0px auto 0px auto;
+  margin: 0px auto 0px auto;
   padding: 0px 1em 0px 1em;
   height: 60px;
 }

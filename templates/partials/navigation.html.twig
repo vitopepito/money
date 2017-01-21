@@ -1,6 +1,7 @@
 <img class="pure-img" id="logo" src="{{ url('theme://images/logo.png') }}">
 <p id="site-title">{{ config.site.title }}</p>
 
+{# doesnt work somehow #}
 <ul>
 {% for p in page.children.visible %}
 {% set current_page = (p.active or p.activeChild) ? 'active' : '' %}
@@ -22,10 +23,22 @@
 {% endfor %}
 </ul>
 
+{# simplified version of the above
 <ul>
 {% for page in pages.children.visible %}
   <li>
     <a href="{{ page.url }}">{{ page.menu }}</a>
   </li>
+{% endfor %}
+</ul>
+#}
+
+{# another try #}
+<ul>
+{% for page in pages.children.visible %}
+{% set current_page = (page.active or page.activeChild) ? 'active' : '' %}
+<li><a class="{{ current_page }}" href="{{ page.url }}">
+  {{ page.menu }}
+</a></li>
 {% endfor %}
 </ul>

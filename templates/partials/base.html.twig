@@ -28,8 +28,10 @@
 
   <div id="header" >
     {% block header %}
-    <h1 class="_text _text-5">The Creative's&nbsp;<br>Knowledge Base</h2>
-    <p class="_text _text-6">We provide information for creative freelancers in Switzerland</p>
+    <div class="horizontal-center">
+      <h1>{{ page.header }}</h2>
+      <p>{{ page.description }}</p>
+    </div>
     {% endblock header %}
   </div>
 

@@ -11,11 +11,21 @@
     <link href="http://fonts.googleapis.com/css?family=Lato:400,400,300,900" rel="stylesheet" type="text/css">
 
     {% block stylesheets %}
-      {# not use it for now {% do assets.addDirCss('theme://css/pure', 102) %} #}
-      {% do assets.addCss('theme://css/custom_new.css', 101) %}
+      {% do assets.addCss('theme://css/main-position.css', 102) %}
+      {# not use it for now
+      {% do assets.addDirCss('theme://css/pure', 101) %}
       {% do assets.addCss('https://unpkg.com/purecss@0.6.2/build/base-min.css', 103) %}
+      {% do assets.addCss('https://unpkg.com/purecss@0.6.2/build/grids-responsive-min.css', 104) %}
+      #}
     {% endblock %}
     {{ assets.css() }}
+    <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css">
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/grids-responsive-old-ie-min.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/grids-responsive-min.css">
+    <!--<![endif]-->
   {% endblock head %}
 </head>
 
@@ -42,12 +52,14 @@
   {% endblock content %}
 </div>
 
-<div id="footer">
-  {% block footer %}
-  {% if site.address %}
-  <p>{{ site.address.name }} | {{ site.address.street }} | {{ site.address.city }}</p>
-  {% endif %}
-  {% endblock footer %}
-</div>
+
+{% block footer %}
+  <div id="footer">
+    {% if site.address %}
+    <p>{{ site.address.name }} | {{ site.address.street }} | {{ site.address.city }}</p>
+    {% endif %}
+  </div>
+{% endblock footer %}
+
 </body>
 </html>

@@ -1,12 +1,12 @@
 body {
-
-
+  font-family: 'Lato', Arial, Helvetica, sans-serif;
 }
 
 #navigation {
   max-width: 1200px;
-  margin-left: 0 auto 0 auto;
-  padding: 0 1em 0 1em;
+  margin-left: 0px auto 0px auto;
+  padding: 0px 1em 0px 1em;
+  height: 60px;
 }
 
 #navigation ul {
@@ -16,21 +16,23 @@ body {
 
 #header {
   max-width: 960px;
-  margin-left: 0 auto 0 auto;
-  padding: 0 1em 0 1em;
+  margin-left: 0px auto 0px auto;
+  padding: 0px 1em 0px 1em;
+  height: 220px;
 }
 
 
 #content {
   max-width: 960px;
-  margin-left: 0 auto 0 auto;
-  padding: 0 1em 0 1em;
+  margin-left: 0px auto 0px auto;
+  padding: 0px 1em 0px 1em;
 }
 
 #footer {
   max-width: 1200px;
-  margin-left: 0 auto 0 auto;
-  padding: 0 1em 0 1em;
+  margin-left: 0px auto 0px auto;
+  padding: 0px 1em 0px 1em;
+  height: 60px;
 }
 
 .horizontal-center {

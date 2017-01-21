@@ -1,11 +1,13 @@
 body {
   font-family: 'Lato', Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 #navigation {
   max-width: 1200px;
-  margin: 0px auto 0px auto;
-  padding: 0px 1em 0px 1em;
+  margin: 0 auto;
+  padding: 0 auto;
   height: 60px;
 }
 
@@ -39,22 +41,21 @@ a.active {
 
 #header {
   max-width: 960px;
-  margin: 0px auto 0px auto;
-  padding: 0px 1em 0px 1em;
+  margin: 0 auto;
+  padding: 4em 1em;
   height: 220px;
 }
 
-
 #content {
   max-width: 960px;
-  margin: 0px auto 0px auto;
-  padding: 0px 1em 0px 1em;
+  margin: 0 auto;
+  padding: 0 auto;
 }
 
 #footer {
   max-width: 1200px;
-  margin: 0px auto 0px auto;
-  padding: 0px 1em 0px 1em;
+  margin: 0 auto;
+  padding: 0 auto;
   height: 60px;
 }
 

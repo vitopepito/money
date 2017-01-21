@@ -1,44 +1,15 @@
-<img class="pure-img" id="logo" src="{{ url('theme://images/logo.png') }}">
-<p id="site-title">{{ config.site.title }}</p>
-
-{# doesnt work somehow #}
 <ul>
-{% for p in page.children.visible %}
-{% set current_page = (p.active or p.activeChild) ? 'active' : '' %}
-  {% if p.children.visible.count > 0 %}
-  <li class="has-children {{ current_page }}">
-    <a href="{{ p.url }}">
-      {{ p.menu }}
-      <span></span>
-    </a>
-  </li>
-  {% else %}
-  <li class="{{ current_page }}">
-    <a href="{{ p.url }}">
-      {% if p.header.icon %}<i class="fa fa-{{ p.header.icon }}"></i>{% endif %}
-      {{ p.menu }}
-    </a>
-  </li>
-  {% endif %}
-{% endfor %}
-</ul>
-
-{# simplified version of the above
-<ul>
-{% for page in pages.children.visible %}
   <li>
-    <a href="{{ page.url }}">{{ page.menu }}</a>
+    <img class="pure-img" id="logo" src="{{ url('theme://images/logo.png') }}">
   </li>
-{% endfor %}
-</ul>
-#}
+  <li>
+    <p id="site-title">{{ config.site.title }}</p>
+  </li>
 
-{# another try #}
-<ul>
-{% for page in pages.children.visible %}
-{% set current_page = (page.active or page.activeChild) ? 'active' : '' %}
-<li><a class="{{ current_page }}" href="{{ page.url }}">
-  {{ page.menu }}
-</a></li>
-{% endfor %}
+  {% for page in pages.children.visible %}
+  {% set current_page = (page.active or page.activeChild) ? 'active' : '' %}
+  <li><a class="{{ current_page }}" href="{{ page.url }}">
+    {{ page.menu }}
+  </a></li>
+  {% endfor %}
 </ul>

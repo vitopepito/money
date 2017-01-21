@@ -11,7 +11,7 @@
     <link href="http://fonts.googleapis.com/css?family=Lato:400,400,300,900" rel="stylesheet" type="text/css">
 
     {% block stylesheets %}
-      {% do assets.addDirCss('theme://css/pure', 102) %}
+      {# not use it for now {% do assets.addDirCss('theme://css/pure', 102) %} #}
       {% do assets.addCss('theme://css/custom_new.css', 101) %}
     {% endblock %}
     {{ assets.css() }}

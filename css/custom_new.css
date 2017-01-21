@@ -10,26 +10,29 @@ body {
 }
 
 #navigation ul {
-  display: inline-block;
   list-style: none;
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 #navigation li {
   float: left;
 }
 #navigation li a {
-  display: block;
-  padding: 1em 2em;
+  display: inline-block;
+  padding: 0em 1em;
   text-decoration: none;
 }
 #navigation li a:hover {
   font-weight: bold;
 }
-#navigation li a .active {
+a.active {
   font-weight: bold;
 }
 #logo {
   width: 60px;
+}
+#site-title {
 }
 
 #header {

@@ -1,0 +1,20 @@
+body {
+
+
+}
+
+#navigation {
+  max-width: 1200px;
+}
+
+#header {
+  max-width: 960px;
+}
+
+#content {
+  max-width: 960px;
+}
+
+#footer {
+  max-width: 1200px;
+}

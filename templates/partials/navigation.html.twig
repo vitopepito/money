@@ -1,14 +1,23 @@
-<img class="logo" src="{{ url('theme://images/logo.png') }}">
-<p class="_text _text-1">{{ config.site.title }}</p>
+<img class="pure-img" id="logo" src="{{ url('theme://images/logo.png') }}">
+<p id="site-title">{{ config.site.title }}</p>
 
-
-{% for page in pages.children.visible %}
-  <a class="_text _text-1" href="{{ page.url }}">{{ page.menu }}</a>
+<ul>
+{% for p in page.children.visible %}
+{% set current_page = (p.active or p.activeChild) ? 'active' : '' %}
+  {% if p.children.visible.count > 0 %}
+  <li class="has-children {{ current_page }}">
+    <a href="{{ p.url }}">
+      {{ p.menu }}
+      <span></span>
+    </a>
+  </li>
+  {% else %}
+  <li class="{{ current_page }}">
+    <a href="{{ p.url }}">
+      {% if p.header.icon %}<i class="fa fa-{{ p.header.icon }}"></i>{% endif %}
+      {{ p.menu }}
+    </a>
+  </li>
+  {% endif %}
 {% endfor %}
-
-
-{#
-<p class="_text _text-2">ABOUT US</p>
-<p class="_text _text-3">VISIT OUR ROUND TABLE</p>
-<p class="_text _text-4">SEARCH</p>
-#}
+</ul>

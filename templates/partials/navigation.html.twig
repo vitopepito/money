@@ -12,9 +12,26 @@
 <ul>
   {% for page in pages.children.visible %}
   {% set current_page = (page.active or page.activeChild) ? 'active' : '' %}
-  <li><a class="{{ current_page }}" href="{{ page.url }}">
+  <li><a class="{{ current_page }} {{ page.slug }}" href="{{ page.url }}">
     {{ page.menu }}
   </a></li>
   {% endfor %}
 </ul>
 
+
+
+{% for search in page.find('/search') %}
+<ul><li><a class="{{ search.title }} horizontal-right" href="{{ search.url }}">
+  {{ search.menu }} Hello World
+</a></li></ul>
+{% endfor %}
+
+{#
+  {% for search in pages.children %}
+  {% if search.title == 'search' %}
+  <ul><li><a class="{{ search.title }} horizontal-right" href="{{ search.url }}">
+    {{ search.menu }}
+  </a></li></ul>
+  {% endif %}
+  {% endfor %}
+#}

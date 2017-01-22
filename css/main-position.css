@@ -1,8 +1,16 @@
+/*********************************************************************
+for proper placement of the elements
+but not their styling
+*********************************************************************/
+
 body {
-  font-family: 'Lato', Arial, Helvetica, sans-serif;
+  /* font-family: 'Lato', Arial, Helvetica, sans-serif; */
   margin: 0;
   padding: 0;
 }
+
+
+ /*----------------------- Navigation ------------------------------ */
 
 #navigation {
   max-width: 1200px;
@@ -24,24 +32,13 @@ body {
   display: inline-block;
   text-align: center;
   padding: 1em 1.5em;
-  text-decoration: none;
-}
-#navigation li a:hover {
-  text-decoration: underline;
-}
-a.active {
-  font-weight: bold;
-  text-decoration: none;
-}
-a.active:hover {
-  text-decoration: none;
 }
 #logo {
   width: 60px;
 }
-#site-title, #site-title:hover {
-  text-decoration: none;
-}
+
+/*----------------------- Header ------------------------------ */
+
 
 #header {
   max-width: 960px;
@@ -49,11 +46,15 @@ a.active:hover {
   padding: 4em 1em;
 }
 
+/*----------------------- Content ------------------------------ */
+
 #content {
   max-width: 960px;
   margin: 0 auto;
   padding: 0 1em;
 }
+
+/*----------------------- Footer ------------------------------ */
 
 #footer {
   max-width: 1200px;
@@ -64,6 +65,8 @@ a.active:hover {
 #footer p {
   text-align: center;
 }
+
+/*----------------------- Additional ------------------------------ */
 
 .horizontal-center {
   text-align: center;

@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,900');
+
+/*----------------------- General ------------------------------ */
+
+
+body {
+  font-family: 'Lato', Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  color: #262626;
+}
+a, a:visited {
+  color: #666666;
+}
+a:hover {
+  color: #000;
+}
+
+b, optgroup, strong {
+  font-weight: 900;
+}
+
+pre {
+  background-color: #666666;
+}
+
+#header h1 {
+  font-size: 2em;
+  font-weight: 300;
+}
+
+/*----------------------- Color ------------------------------ */
+#navigation li a.site-title, #navigation li a.site-title:hover {
+  color: #E33030;
+}
+#navigation li a {
+  color: #262626;
+  font-weight: 300;
+  text-decoration: none;
+}
+#navigation li a.active {
+  color: #262626;
+  font-weight: 900;
+  text-decoration: none;
+}
+#navigation li a:hover {
+  color: #000;
+  text-decoration: underline;
+}
+#footer {
+  font-weight: 300;
+  color: #E33030;
+}

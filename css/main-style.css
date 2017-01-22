@@ -20,13 +20,13 @@ b, optgroup, strong {
   font-weight: 900;
 }
 
-pre {
-  background-color: #666666;
-}
-
-#header h1 {
+h1, h2, h3 {
   font-size: 2em;
   font-weight: 300;
+}
+h4, h5, h6 {
+  font-size: 1em;
+  font-weight: 900;
 }
 
 /*----------------------- Color ------------------------------ */
@@ -50,4 +50,22 @@ pre {
 #footer {
   font-weight: 300;
   color: #E33030;
+}
+
+/*----------------------- Code Block ------------------------------ */
+code {
+  color: #262626;
+}
+
+pre {
+  padding: 1em;
+  border: 1px solid #000;
+  background-color: #EEEEEE;
+}
+
+p code {
+  padding: 0.2em 0.4em;
+  white-space: nowrap;
+  font-size: 90%;
+  background-color: #EEEEEE;
 }

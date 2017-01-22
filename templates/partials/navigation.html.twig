@@ -1,4 +1,38 @@
-{# change to a menu proposed by purecss? #}
+
+<div class="pure-g">
+  <div class="pure-u-1 pure-md-5-6">
+    <div><ul>
+      <li>
+        <img class="pure-img" id="logo" src="{{ url('theme://images/logo.png') }}">
+      </li>
+      <li>
+        <a class="site-title">{{ config.site.title }}</a>
+      </li>
+        <a class="menu-toggle" href="#">menu</a>
+    </ul></div>
+    <div><ul>
+      {% for page in pages.children.visible %}
+      {% set current_page = (page.active or page.activeChild) ? 'active' : '' %}
+      <li><a class="{{ current_page }} {{ page.slug }}" href="{{ page.url }}">
+        {{ page.menu }}
+      </a></li>
+      {% endfor %}
+    </ul></div>
+  </div>
+  <div class="pure-u-1 pure-md-1-6">
+    <div class="horizontal-right">
+    <ul><li><a class="search" href="{{ search.url }}">
+      {{ search.menu }} Hello World
+    </a></li></ul></div>
+  </div>
+</div>
+
+
+
+
+
+
+{# change to a menu proposed by purecss?
 
 <ul>
   <li>
@@ -22,13 +56,17 @@
   {{ search.menu }} Hello World
 </a></li></ul>
 
+#}
+
+{# search field on the right side
+
 {% for search in page.find('/search') %}
 <ul><li><a class="{{ search.title }} horizontal-right" href="{{ search.url }}">
   {{ search.menu }} Hello World
 </a></li></ul>
 {% endfor %}
 
-{#
+
   {% for search in pages.children %}
   {% if search.title == 'search' %}
   <ul><li><a class="{{ search.title }} horizontal-right" href="{{ search.url }}">

@@ -29,12 +29,29 @@ body {
   float: left;
 }
 #navigation li a {
-  display: inline-block;
+  display: inline-block; 
   text-align: center;
-  padding: 1em 1.5em;
+  padding: .8em 1em;
 }
 #logo {
   width: 60px;
+}
+.menu-toggle {
+  height: 60px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
+}
+@media (max-width: 48em) {
+
+  .horizontal-right {
+    text-align: left;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
 }
 
 /*----------------------- Header ------------------------------ */

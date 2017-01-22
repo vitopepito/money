@@ -1,5 +1,20 @@
 {% extends 'partials/base.html.twig' %}
 
 {% block content %}
-	{{ page.content }}
+
+{{ page.content }}
+
+<div class="pure-g">
+	{% for article in page.collection %}
+	<div class="pure-u-1 pure-u-md-1-2">
+		<div class="article-wrapper"><div class="article-thumbnail">
+			<a href=" {{ article.url }}"><span></span></a>
+			<h4>{{ article.title }}</h4>
+		</div></div>
+	</div>
+	{% endfor %}
+</div>
+
+
+
 {% endblock %}

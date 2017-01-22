@@ -18,7 +18,9 @@
   {% endfor %}
 </ul>
 
-
+<ul><li><a class="search horizontal-right" href="{{ search.url }}">
+  {{ search.menu }} Hello World
+</a></li></ul>
 
 {% for search in page.find('/search') %}
 <ul><li><a class="{{ search.title }} horizontal-right" href="{{ search.url }}">

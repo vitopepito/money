@@ -9,6 +9,9 @@ body {
   font-weight: 400;
   color: #262626;
 }
+p {
+  line-height: 1.5em;
+}
 a, a:visited {
   color: #666666;
 }

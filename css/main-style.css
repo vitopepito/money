@@ -14,7 +14,7 @@ body {
   /* font-weight: 400; */
   color: #262626;
 }
-p {
+p, {
   line-height: 1.5em;
   font-weight: 400;
 }
@@ -39,7 +39,7 @@ h4, h5, h6 {
 }
 
 /*----------------------- Navigation ------------------------------ */
-#navigation li a.site-title, #navigation li a.site-title:hover {
+#navigation ul.nav-title li span, #navigation ul.nav-title li span:hover {
   color: #E33030;
   text-decoration: none;
 }

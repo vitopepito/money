@@ -16,7 +16,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1em;
-  height: 60px;
+  /*height: 60px;*/
 }
 
 #navigation ul {
@@ -25,17 +25,36 @@ body {
   margin: 0;
   padding: 0;
 }
-#navigation li {
+
+#navigation ul li {
+  padding: 0.5em 0.5em;
+}
+
+#navigation ul.nav-title li {
+  display: inline-block;
+}
+
+#navigation ul.nav-pages li {
+  display: block;
+  text-align: right;
+}
+
+#navigation ul li.nav-toggle {
+  text-align: right;
+  float: right;
+}
+/*#navigation li {
   float: left;
 }
 #navigation li a {
-  display: inline-block; 
+  display: inline-block;
   text-align: center;
   padding: .8em 1em;
-}
+}*/
 #logo {
-  width: 60px;
+  width: 45px;
 }
+/*
 .menu-toggle {
   height: 60px;
   position: absolute;
@@ -52,7 +71,8 @@ body {
   .menu-toggle {
     display: block;
   }
-}
+}*/
+
 
 /*----------------------- Header ------------------------------ */
 

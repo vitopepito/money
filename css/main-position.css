@@ -30,48 +30,41 @@ body {
   padding: 0.5em 0.5em;
 }
 
+#logo {
+  width: 45px;
+  float: left;
+}
+
 #navigation ul.nav-title li {
   display: inline-block;
 }
 
-#navigation ul.nav-pages li {
-  display: block;
-  text-align: right;
-}
-
-#navigation ul li.nav-toggle {
+#navigation ul.nav-pages {
   text-align: right;
   float: right;
 }
-/*#navigation li {
-  float: left;
+
+#navigation ul li.nav-search {
+  float: right;
 }
-#navigation li a {
-  display: inline-block;
-  text-align: center;
-  padding: .8em 1em;
-}*/
-#logo {
-  width: 45px;
-}
-/*
-.menu-toggle {
-  height: 60px;
-  position: absolute;
-  top: 0;
-  right: 0;
+
+/*pages dropdown inactive on mobile per default*/
+#show-pages {
   display: none;
 }
-@media (max-width: 48em) {
 
-  .horizontal-right {
-    text-align: left;
-  }
+/*Hide checkbox*/
+input[type=checkbox]{
+    display: none;
+}
 
-  .menu-toggle {
+/*Show menu when invisible checkbox is checked*/
+input[type=checkbox]:checked ~ #show-pages {
     display: block;
-  }
-}*/
+}
+
+
+
 
 
 /*----------------------- Header ------------------------------ */

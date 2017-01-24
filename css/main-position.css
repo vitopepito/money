@@ -35,13 +35,22 @@ body {
   float: left;
 }
 
+#navigation ul.nav-title {
+  float: left;
+}
+
+#navigation ul.nav-toggle {
+  float: right;
+}
+
 #navigation ul.nav-title li {
   display: inline-block;
 }
 
 #navigation ul.nav-pages {
   text-align: right;
-  float: right;
+  /*float: right;*/
+  clear: both;
 }
 
 #navigation ul li.nav-search {

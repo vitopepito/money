@@ -1,5 +1,38 @@
 
+
+
+<input type="checkbox" id="show-menu" role="button">
+<ul class="nav-title">
+  <li><img class="pure-img" id="logo" src="{{ url('theme://images/logo.png') }}"></li>
+    <li>
+      <a>{{ config.site.title }}</a>
+    </li>
+</ul>
+<ul class="nav-toggle">
+  <li>
+    <label for="show-menu">menu
+    </label>
+  </li>
+</ul>
+<ul class="nav-pages" id="show-pages">
+
+  {% for page in pages.children.visible %}
+  {% set current_page = (page.active or page.activeChild) ? 'active' : '' %}
+
+  <li><a class="{{ current_page }} {{ page.slug }}" href="{{ page.url }}">
+    {{ page.menu }}
+  </a></li>
+  {% endfor %}
+
+  <li class="nav-search"><a href="#">search</a></li>
+
+</ul>
+
+
+
+{#
 <div>
+  <input type="checkbox" id="show-menu" role="button">
   <!-- <ul class="nav-title"> -->
     <img class="pure-img" id="logo" src="{{ url('theme://images/logo.png') }}">
     <li>
@@ -10,7 +43,7 @@
   <label for="show-menu">
     <ul class="nav-toggle"><li>menu</li></ul>
   </label>
-  <input type="checkbox" id="show-menu" role="button">
+
 
   <ul class="nav-pages" id="show-pages">
 
@@ -27,51 +60,4 @@
   </ul>
 </div>
 
-
-
-
-
-
-{# change to a menu proposed by purecss?
-
-<ul>
-  <li>
-    <img class="pure-img" id="logo" src="{{ url('theme://images/logo.png') }}">
-  </li>
-  <li>
-    <a class="site-title">{{ config.site.title }}</a>
-  </li>
-</ul>
-
-<ul>
-  {% for page in pages.children.visible %}
-  {% set current_page = (page.active or page.activeChild) ? 'active' : '' %}
-  <li><a class="{{ current_page }} {{ page.slug }}" href="{{ page.url }}">
-    {{ page.menu }}
-  </a></li>
-  {% endfor %}
-</ul>
-
-<ul><li><a class="search horizontal-right" href="{{ search.url }}">
-  {{ search.menu }} Hello World
-</a></li></ul>
-
-#}
-
-{# search field on the right side
-
-{% for search in page.find('/search') %}
-<ul><li><a class="{{ search.title }} horizontal-right" href="{{ search.url }}">
-  {{ search.menu }} Hello World
-</a></li></ul>
-{% endfor %}
-
-
-  {% for search in pages.children %}
-  {% if search.title == 'search' %}
-  <ul><li><a class="{{ search.title }} horizontal-right" href="{{ search.url }}">
-    {{ search.menu }}
-  </a></li></ul>
-  {% endif %}
-  {% endfor %}
 #}

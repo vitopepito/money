@@ -106,6 +106,39 @@ input[type=checkbox]:checked ~ #show-pages {
   padding: 0 1em;
 }
 
+/*----------------------- Flexboxes ------------------------------ */
+
+@media screen and (min-width: 50em) {
+  .box-horizontal {
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: row nowrap;
+  }
+}
+
+  .box-horizontal {
+    padding-top: 1em;
+  }
+  .box-horizontal p {
+    margin-top: 0;
+  }
+
+  .even {
+    flex: 1 1 0;
+  }
+
+
+  .even.border {
+    margin: 1em 1em 0 1em;
+    padding: 0.5em;
+    border: 2px solid #E33030;
+  }
+  .box-horizontal.border .even {
+    margin: 0.5em;
+  }
+
+
+
 /*----------------------- Footer ------------------------------ */
 
 #footer {
@@ -129,8 +162,7 @@ input[type=checkbox]:checked ~ #show-pages {
   padding: 6em 0;
 }
 div.article-thumbnail {
-  border: 1px solid black;
-  background-color: #278F94
+
 }
 .article-thumbnail h4 {
   text-align: center;

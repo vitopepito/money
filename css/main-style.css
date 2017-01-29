@@ -5,24 +5,43 @@ for styling only
 
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,900');
 
-/*----------------------- General ------------------------------ */
 
+
+/*----------------------- Color Variables ------------------------------ */
+
+:root {
+  --main-base: #262626;
+  --main-light: #666666;
+  --main-ultralight: #EEEEEE;
+  --main-dark: #000;
+  --aggro-base: #E33030;
+  --aggro-light: #f76d6d;
+  --aggro-dark: #802a2a;
+  --kind-base: #278f94;
+  --kind-light: #8bc7cc;
+  --kind-dark: #1a5b61;
+}
+
+/*----------------------- General ------------------------------ */
 
 body {
   font-family: 'Lato', Helvetica, Arial, sans-serif;
   font-size: 1em;
   /* font-weight: 400; */
   color: #262626;
+  line-height: 1.2em;
+}
+h1, h2, h3, h4, h5, h6, p {
+  margin-top: 1em;
 }
 p, {
-  line-height: 1.5em;
   font-weight: 400;
 }
-a, a:visited {
-  color: #666666;
+#content a, a:visited {
+  color: #278f94;
 }
-a:hover {
-  color: #000;
+#content a:hover {
+  color: #1a5b61;
 }
 
 b, optgroup, strong {
@@ -37,23 +56,30 @@ h4, h5, h6 {
   font-size: 1em;
   font-weight: 900;
 }
+pre {
+  overflow: auto;
+}
 
 /*----------------------- Navigation ------------------------------ */
-#navigation ul.nav-title li span, #navigation ul.nav-title li span:hover {
-  color: #E33030;
+
+#navigation, #navigation ul li, #navigation a {
   text-decoration: none;
-}
-#navigation li a {
-  color: #262626;
+  list-style: none;
+  list-style-type: none;
   font-weight: 300;
-  text-decoration: none;
-}
-#navigation li a.active {
   color: #262626;
-  font-weight: 900;
-  text-decoration: none;
+  line-height: 1.8em;
 }
-#navigation li a:hover {
+
+#navigation .nav-title {
+  color: #E33030;
+}
+
+#navigation .active {
+  font-weight: 900;
+}
+
+#navigation .nav-pages a:hover {
   color: #000;
   text-decoration: underline;
 }

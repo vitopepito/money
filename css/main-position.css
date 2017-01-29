@@ -3,59 +3,42 @@ for proper placement of the elements
 but not their styling
 *********************************************************************/
 
-body {
-  /* font-family: 'Lato', Arial, Helvetica, sans-serif; */
+
+/*----------------------- Reset ------------------------------ */
+
+* {
   margin: 0;
   padding: 0;
 }
-
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 
  /*----------------------- Navigation ------------------------------ */
 
 #navigation {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1em;
+  padding: 1em;
+  display: flex;
+  display: -webkit-flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
   /*height: 60px;*/
 }
 
-#navigation ul {
-  list-style: none;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-#navigation ul li {
-  padding: 0.5em 0.5em;
+#navigation .nav-pages {
+  margin-left: auto;
+  text-align: right;
 }
 
 #logo {
-  width: 45px;
-  float: left;
+  width: 1.8em;
 }
 
-#navigation ul.nav-title {
-  float: left;
-}
-
-#navigation ul.nav-toggle {
-  float: right;
-}
-
-#navigation ul.nav-title li {
-  display: inline-block;
-}
-
-#navigation ul.nav-pages {
-  text-align: right;
-  /*float: right;*/
-  clear: both;
-}
-
-#navigation ul li.nav-search {
-  float: right;
-}
 
 /*pages dropdown inactive on mobile per default*/
 #show-pages {
@@ -72,7 +55,7 @@ input[type=checkbox]:checked ~ #show-pages {
     display: block;
 }
 
-
+/*Arrangement on larger displays*/
 
 
 

@@ -120,12 +120,12 @@ code {
 pre {
   overflow: auto;
   margin: 1em 0;
-  padding: 0 1em;
+  padding: 1em 1em;
   background-color: #EEEEEE;
 }
 
 p code {
-  /*padding: 0.2em 0.4em;*/
+  padding: 0.2em 0.4em;
   white-space: nowrap;
   font-size: 90%;
   background-color: #EEEEEE;

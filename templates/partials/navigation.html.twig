@@ -1,6 +1,25 @@
+<div id="navigation">
 
+  <div class="nav-title">
+    <div><img id="logo" src="{{ url('theme://images/logo.png') }}"></div>
+    <div>{{ config.site.title }}</div>
+  </div>
 
+  <div class="nav-pages">
+    <label class="nav-toggle" for="show-menu">menu</label>
+    <input type="checkbox" id="show-menu" role="button">
+    <ul id="show-pages">
+      {% for page in pages.children.visible %}
+      {% set current_page = (page.active or page.activeChild) ? 'active' : '' %}
+        <li><a class="{{ current_page }} {{ page.slug }}" href="{{ page.url }}">{{ page.menu }}</a></li>
+      {% endfor %}
 
+      <li class="nav-right"><a href="#">search</a></li>
+    </ul>
+  </div>
+</div>
+
+{#
 <input type="checkbox" id="show-menu" role="button">
 <ul class="nav-title">
   <li><img class="pure-img" id="logo" src="{{ url('theme://images/logo.png') }}"></li>
@@ -27,37 +46,4 @@
   <li class="nav-search"><a href="#">search</a></li>
 
 </ul>
-
-
-
-{#
-<div>
-  <input type="checkbox" id="show-menu" role="button">
-  <!-- <ul class="nav-title"> -->
-    <img class="pure-img" id="logo" src="{{ url('theme://images/logo.png') }}">
-    <li>
-      <a>{{ config.site.title }}</a>
-    </li>
-  <!-- </ul> -->
-
-  <label for="show-menu">
-    <ul class="nav-toggle"><li>menu</li></ul>
-  </label>
-
-
-  <ul class="nav-pages" id="show-pages">
-
-    {% for page in pages.children.visible %}
-    {% set current_page = (page.active or page.activeChild) ? 'active' : '' %}
-
-    <li><a class="{{ current_page }} {{ page.slug }}" href="{{ page.url }}">
-      {{ page.menu }}
-    </a></li>
-    {% endfor %}
-
-    <li class="nav-search"><a href="#">search</a></li>
-
-  </ul>
-</div>
-
 #}

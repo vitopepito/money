@@ -133,6 +133,6 @@ p code {
 
 hr {
   box-sizing: content-box;
-  height: 1px;
+  height: 2px;
   color: #262626;
 }

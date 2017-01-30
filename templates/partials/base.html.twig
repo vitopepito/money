@@ -14,10 +14,8 @@
 
 
     {% block stylesheets %}
-    <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css">
-    <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/tables-min.css">
-    {% do assets.addCss('theme://css/pure/grid.css', 101) %}
-    {% do assets.addCss('theme://css/main-position.css', 102) %}
+    {% do assets.addCss('theme://css/main-position.css', 101) %}
+    {% do assets.addCss('theme://css/main-grid.css', 102) %}
     {% do assets.addCss('theme://css/main-style.css', 103) %}
     {% endblock %}
     {{ assets.css() }}
@@ -27,11 +25,10 @@
 
 
 <body id="body">
-  <div id="navigation">
+
     {% block navigation %}
     {% include 'partials/navigation.html.twig' %}
     {% endblock navigation %}
-  </div>
 
   <div id="header" >
     {% block header %}

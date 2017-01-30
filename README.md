@@ -2,9 +2,9 @@
 __for the moneynotlove.ch website on grav__
 
 developing the theme to suit our needs, using:
-- https://getgrav.org
-- http://twig.sensiolabs.org
-- http://www.meetsally.com
+- https://getgrav.org as our main CMS
+- http://twig.sensiolabs.org as the template engine
+- http://www.meetsally.com for the responsive flexbox
 
 the page content will also be opensourced in the future, but in another repository
 

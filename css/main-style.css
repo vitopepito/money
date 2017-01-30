@@ -31,10 +31,16 @@ body {
   color: #262626;
   line-height: 1.2em;
 }
-h1, h2, h3, h4, h5, h6, p, pre {
+/*h1, h2, h3, h4, h5, h6 {
+  margin: 2em 0 1em 0;
+}*/
+p + p {
   margin-top: 1em;
 }
-p, {
+/*p:last-child {
+  margin-bottom: 1em;
+}*/
+p {
   font-weight: 400;
 }
 #content a, a:visited {
@@ -50,14 +56,16 @@ b, optgroup, strong {
 
 h1, h2, h3 {
   font-size: 2em;
+  line-height: normal;
   font-weight: 300;
 }
 h4, h5, h6 {
   font-size: 1em;
+  line-height: normal;
   font-weight: 900;
 }
-pre {
-  overflow: auto;
+ul, ol {
+  margin-left: 1.25em;
 }
 
 /*----------------------- Navigation ------------------------------ */
@@ -84,12 +92,17 @@ pre {
   text-decoration: underline;
 }
 
-/*----------------------- Footer ------------------------------ */
+/*----------------------- Content ------------------------------ */
 
 [class*="col"] .border {
   padding: 0.5em;
   height: 100%;
   border: 2px solid #E33030;
+}
+
+#content h4, #content h5, #content h6 {
+  margin: 2em 0 1em 0;
+
 }
 
 /*----------------------- Footer ------------------------------ */
@@ -105,12 +118,14 @@ code {
 }
 
 pre {
-  padding: 1em;
+  overflow: auto;
+  margin: 1em 0;
+  padding: 0 1em;
   background-color: #EEEEEE;
 }
 
 p code {
-  padding: 0.2em 0.4em;
+  /*padding: 0.2em 0.4em;*/
   white-space: nowrap;
   font-size: 90%;
   background-color: #EEEEEE;

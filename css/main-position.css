@@ -108,6 +108,9 @@ input[type=checkbox]:checked ~ #show-pages {
 
 /*----------------------- Flexboxes ------------------------------ */
 
+/*
+replaced with the http://www.meetsally.com based main-grid.css
+
 @media screen and (min-width: 50em) {
   .box-horizontal {
     display: flex;
@@ -135,7 +138,7 @@ input[type=checkbox]:checked ~ #show-pages {
   }
   .box-horizontal.border .even {
     margin: 0.5em;
-  }
+  }*/
 
 
 

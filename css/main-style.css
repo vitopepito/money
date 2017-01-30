@@ -86,6 +86,14 @@ pre {
 
 /*----------------------- Footer ------------------------------ */
 
+[class*="col"] .border {
+  padding: 0.5em;
+  height: 100%;
+  border: 2px solid #E33030;
+}
+
+/*----------------------- Footer ------------------------------ */
+
 #footer {
   font-weight: 300;
   color: #E33030;

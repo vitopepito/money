@@ -2,17 +2,19 @@
 
 {% block content %}
   <div class="topics row">
-  {% for p in page.collection %}
-    <div class="col-xs-12 col-md-6">
-    <h4 class"topic"><a href="{{ p.url }}">{{ p.title }}</a></h2>
-      <ul>
-      {% for article in p.children %}
-        <li><a href="{{ article.url }}">
-        {{ article.title }}</a></li>
-      {% endfor %}
-      </ul>
-    </div>
-  {% endfor %}
-  </div>
+
+    {% for p in page.find('/knowledge-base').children if p != page %}
+      <div class="col-xs-12 col-md-6">
+        <p>
+          <a href="{{ p.url }}">{{ p.title }}</a>
+        </p>
+        <ul>
+          {% for item in p.collection %}
+          <li><a href="{{ p.url }}#{{item.slug}}">{{ item.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endfor %}
+
   {{ page.content }}
 {% endblock %}

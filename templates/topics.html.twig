@@ -1,0 +1,13 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block header %}
+  <span></span>
+{% endblock header %}
+
+
+{% block content %}
+  {% for p in page.collection %}
+    <h4 id="{{ p.slug }}">{{ p.title }}</h4>
+    {{ p.content }}
+  {% endfor %}
+{% endblock %}

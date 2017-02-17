@@ -156,6 +156,32 @@ replaced with the http://www.meetsally.com based main-grid.css
 
 /*----------------------- Articles ------------------------------ */
 
+
+/* works for col-xx-4 = 33.333% */
+/*.square {
+  height: 0;
+  width: 33.333%;
+  padding-bottom: 33.333%;
+}
+*/
+
+.square {
+  height: auto;
+}
+
+.square:before {
+  content: '';
+  display: table;
+  float: left;
+  padding-top: 100%;
+}
+
+.square > div {
+  height: 100%;
+  padding: 2em;
+  margin-bottom: auto;
+}
+
 .article-thumbnail {
   position: relative;
   padding: 6em 0;

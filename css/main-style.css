@@ -14,13 +14,23 @@ for styling only
   --main-light: #666666;
   --main-ultralight: #EEEEEE;
   --main-dark: #000;
-  --aggro-base: #E33030;
-  --aggro-light: #f76d6d;
-  --aggro-dark: #802a2a;
-  --kind-base: #278f94;
-  --kind-light: #8bc7cc;
-  --kind-dark: #1a5b61;
+  --red-base: #E33030;
+  --red-light: #f76d6d;
+  --red-dark: #802a2a;
+  --green-base: #278f94;
+  --green-light: #8bc7cc;
+  --green-dark: #1a5b61;
 }
+
+.box-red {
+  color: white;
+  background-color: #E33030;
+}
+.box-green {
+  color: white;
+  background-color: #278f94;
+}
+
 
 /*----------------------- General ------------------------------ */
 
@@ -29,10 +39,11 @@ body {
   font-size: 1em;
  font-weight: 300;
   color: #262626;
-  line-height: 1.4em;
+  line-height: normal;
 }
 p {
   font-weight: 300;
+  line-height: 1.4em;
 }
 p + p {
   margin-top: 1em;
@@ -52,6 +63,39 @@ b, optgroup, strong {
   font-weight: 900;
 }
 
+h1 {
+  font-size: 2em;
+  font-weight: 900;
+}
+
+h2 {
+  font-size: 2em;
+  font-weight: 300;
+}
+
+h3 {
+  font-size: 1.25em;
+  font-weight: 900;
+}
+
+h4 {
+  font-size: 1.25em;
+  font-weight: 400;
+}
+
+h5 {
+  font-size: 1em;
+  font-weight: 900;
+}
+
+h6 {
+  font-size: 1em;
+  font-weight: 300;
+}
+
+
+
+/*
 h1, h2, h3 {
   font-size: 2em;
   line-height: normal;
@@ -63,6 +107,8 @@ h4, h5, h6 {
   font-weight: 300;
   color: #E33030;
 }
+*/
+
 ul, ol {
   margin-left: 1.25em;
 }

@@ -40,9 +40,9 @@ html, body {
 }
 
 [class*="col"] {
-  margin-top: 1em; /* adding top margin - nando */
+  /* margin-top: 1em;  adding top margin - nando */
   width: 100%;
-  padding: 0 0.5rem; }
+  padding: 0.5rem; }
 
 
 

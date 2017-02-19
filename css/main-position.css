@@ -167,6 +167,7 @@ replaced with the http://www.meetsally.com based main-grid.css
 
 .square {
   height: auto;
+  position: relative;
 }
 
 .square:before {
@@ -180,6 +181,8 @@ replaced with the http://www.meetsally.com based main-grid.css
   height: 100%;
   padding: 2em;
   margin-bottom: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .article-thumbnail {
@@ -209,4 +212,12 @@ replaced with the http://www.meetsally.com based main-grid.css
 }
 .horizontal-right {
   text-align: right;
+}
+.vertical-bottom {
+  position: absolute;
+  bottom: 1em;
+  left: auto;
+}
+.flex-bottom {
+  margin-top: auto;
 }

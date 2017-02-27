@@ -51,6 +51,7 @@
     {% if site.address %}
     <p>{{ site.address.name }} | {{ site.address.street }} | {{ site.address.city }}</p>
     {% endif %}
+    <p>{{ "chef@moneynotlove.ch"|safe_email }}</p>
   </div>
 {% endblock footer %}
 

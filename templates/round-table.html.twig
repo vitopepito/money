@@ -3,24 +3,42 @@
 {% block content %}
 
 {{ page.content }}
-<div class="row">
-	{% for article in page.collection %}
-	<div class="col-xs-12 col-md-6">
-		<div class="border"><div class="article-thumbnail">
-			<a href=" {{ article.url }}"><span></span></a>
-			<h4>{{ article.title }}</h4>
-		</div></div>
-	</div>
-	{% endfor %}
-</div>
 
-<div class="row">
-	<div class="col-xs-6">
-		older
-	</div>
-	<div class="col-xs-6 align-right">
-		newer
-	</div>
-</div>
+{% set collection = page.collection() %}
+{% set dateformat = admin.page.dateformat ?: config.system.pages.dateformat.long ?: "j F Y" %} {# j = day without leading zero, F = full word Month, Y = four digit year #}
+
+<article class="row">
+	{% for post in collection %}
+		<div class="col-xs-12 col-md-4 square horizontal-center">
+
+			{% if post.media['cover-image.jpg'] %}
+			<div class="box-red box-blend" style="background-image: url({{ post.media['cover-image.jpg'].cropZoom(500,500).greyscale.url }})">
+
+			{% elseif post.media.images %}
+			{% set first_image = post.media.images|first %}
+			<div class="box-red box-blend" style="background-image: url({{ first_image.cropZoom(500,500).greyscale.url }})">
+
+			{% else %}
+			<div class="box-red">
+
+			{% endif %}
+
+				<a class="link-box" href=" {{ post.url }}"><span></span></a>
+				<h3>{{ post.title }}</h3>
+				<p>{{ post.header.event.date|date(dateformat) }}</p>
+				<p class="flex-bottom">discover more</p>
+
+			</div>
+		</div>
+
+
+	{% endfor %}
+
+
+</article>
+
+
+{# 	{% if article.header.event.date|date > date('now') %} #}
+
 
 {% endblock %}

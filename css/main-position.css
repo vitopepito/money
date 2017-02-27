@@ -157,14 +157,6 @@ replaced with the http://www.meetsally.com based main-grid.css
 /*----------------------- Articles ------------------------------ */
 
 
-/* works for col-xx-4 = 33.333% */
-/*.square {
-  height: 0;
-  width: 33.333%;
-  padding-bottom: 33.333%;
-}
-*/
-
 .square {
   height: auto;
   position: relative;
@@ -185,17 +177,18 @@ replaced with the http://www.meetsally.com based main-grid.css
   flex-direction: column;
 }
 
-.article-thumbnail {
-  position: relative;
-  padding: 6em 0;
+/* probably remove this again - nando 170219 */
+.square > img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+  mix-blend-mode: soft-light;
 }
 
-.article-thumbnail h4 {
-  text-align: center;
-  margin: 0 auto;
-}
-
-.article-thumbnail a span {
+a.link-box span {
   position:absolute;
   width:100%;
   height:100%;
@@ -205,18 +198,13 @@ replaced with the http://www.meetsally.com based main-grid.css
   z-index: 1;
 }
 
-/*----------------------- Additional ------------------------------ */
+/*----------------------- Alignements ------------------------------ */
 
 .horizontal-center {
   text-align: center;
 }
 .horizontal-right {
   text-align: right;
-}
-.vertical-bottom {
-  position: absolute;
-  bottom: 1em;
-  left: auto;
 }
 .flex-bottom {
   margin-top: auto;

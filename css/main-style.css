@@ -22,34 +22,25 @@ for styling only
   --green-dark: #1a5b61;
 }
 
-.box-red {
-  color: white;
-  background-color: #E33030;
-}
-.box-green {
-  color: white;
-  background-color: #278f94;
-}
-
 
 /*----------------------- General ------------------------------ */
 
-body {
+body, p, input {
   font-family: 'Lato', Helvetica, Arial, sans-serif;
   font-size: 1em;
- font-weight: 300;
-  color: #262626;
-  line-height: normal;
-}
-p {
   font-weight: 300;
+  color: #262626;
+}
+
+p {
   line-height: 1.4em;
 }
+
 p + p {
   margin-top: 1em;
 }
 p + ul {
-  margin-bottom: 0; !important
+  margin-bottom: 0 !important;
 }
 
 #content a, a:visited {
@@ -96,22 +87,6 @@ h6 {
   font-weight: 300;
 }
 
-
-
-/*
-h1, h2, h3 {
-  font-size: 2em;
-  line-height: normal;
-  font-weight: 300;
-}
-h4, h5, h6 {
-  font-size: 1.2em;
-  line-height: normal;
-  font-weight: 300;
-  color: #E33030;
-}
-*/
-
 ul, ol {
   margin-left: 1.25em;
 }
@@ -157,6 +132,26 @@ ul, ol {
   margin-bottom: 1em;
 }
 
+
+/*----------------------- Color Boxes ------------------------------ */
+
+.box-red, .box-red p {
+  color: white;
+  background-color: #E33030;
+}
+.box-green, .box-green p {
+  color: white;
+  background-color: #278f94;
+}
+
+.box-blend {
+  background-blend-mode: soft-light;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+
 /*----------------------- Footer ------------------------------ */
 
 #footer {
@@ -188,4 +183,14 @@ hr {
   width: 100%;
   margin: 3em 0 3em 0;
   border: 1px solid #f3f3f3;
+}
+
+/*----------------------- Form ------------------------------ */
+
+.text-field {
+  margin: 0.5em 0;
+  padding: 0.2em 0.5em;
+  border: 1px solid #262626;
+  max-width: 100%;
+  width: 100%;
 }

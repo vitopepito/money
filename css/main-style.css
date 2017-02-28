@@ -135,13 +135,19 @@ ul, ol {
 
 /*----------------------- Color Boxes ------------------------------ */
 
-.box-red, .box-red p {
+.box-red {
   color: white;
   background-color: #E33030;
 }
-.box-green, .box-green p {
+.box-red p {
+  color: white;
+}
+.box-green {
   color: white;
   background-color: #278f94;
+}
+.box-green p {
+  color: white;
 }
 
 .box-blend {

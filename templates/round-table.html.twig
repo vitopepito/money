@@ -7,9 +7,71 @@
 {% set collection = page.collection() %}
 {% set dateformat = admin.page.dateformat ?: config.system.pages.dateformat.long ?: "j F Y" %} {# j = day without leading zero, F = full word Month, Y = four digit year #}
 
-{# 	add filtering for date to create "upcoming" section, unclear how... #}
-{# {% if article.header.event.date|date > date('now') %} #}
-{# should i use the default date variable of a page instead of the event.date? #}
+{# 	create 'upcoming' heading only once? #}
+{# {% set upcoming = posts in collection if date(upcoming.header.event.date) > date() %} #}
+
+
+<article class="row">
+{% for post in collection %}
+	{% if date(post.header.event.date) > date() %}
+			<div class="col-xs-12 col-md-4 square horizontal-center">
+
+				{% if post.media['cover-image.jpg'] %}
+					<div class="box-green box-blend" style="background-image: url({{ post.media['cover-image.jpg'].cropZoom(500,500).greyscale.url }})">
+
+				{% elseif post.media.images %}
+					{% set first_image = post.media.images|first %}
+					<div class="box-green box-blend" style="background-image: url({{ first_image.cropZoom(500,500).greyscale.url }})">
+
+				{% else %}
+					<div class="box-green">
+
+				{% endif %}
+
+					<a class="link-box" href=" {{ post.url }}"><span></span></a>
+					<h3>{{ post.title }}</h3>
+					<p>{{ post.header.event.date|date(dateformat) }}</p>
+					<p class="flex-bottom">
+						<span style="text-decoration:underline;">
+		        discover more
+		      	</span>
+					</p>
+
+					</div>
+			</div>
+
+		{% else %}
+			<div class="col-xs-12 col-md-4 square horizontal-center">
+
+				{% if post.media['cover-image.jpg'] %}
+					<div class="box-red box-blend" style="background-image: url({{ post.media['cover-image.jpg'].cropZoom(500,500).greyscale.url }})">
+
+				{% elseif post.media.images %}
+					{% set first_image = post.media.images|first %}
+					<div class="box-red box-blend" style="background-image: url({{ first_image.cropZoom(500,500).greyscale.url }})">
+
+				{% else %}
+					<div class="box-red">
+
+				{% endif %}
+
+					<a class="link-box" href=" {{ post.url }}"><span></span></a>
+					<h3>{{ post.title }}</h3>
+					<p>{{ post.header.event.date|date(dateformat) }}</p>
+					<p class="flex-bottom">
+						<span style="text-decoration:underline;">
+		        discover more
+		      	</span>
+					</p>
+
+					</div>
+			</div>
+
+	{% endif %}
+{% endfor %}
+</article>
+
+
 
 <article class="row">
 	{% for post in collection %}

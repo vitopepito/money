@@ -1,13 +1,16 @@
 {% extends 'partials/base.html.twig' %}
 
 {% block content %}
-  <div class="topics row">
+
+  {{ page.content }}
+
+  <div class="topics row align-center">
 
     {% for p in page.find('/knowledge-base').children if p != page %}
-      <div class="col-xs-12 col-md-6">
-        <p>
+      <div class="col-xs-12 col-md-5">
+        <h5>
           <a href="{{ p.url }}">{{ p.title }}</a>
-        </p>
+        </h5>
         <ul>
           {% for item in p.collection %}
           <li><a href="{{ p.url }}#{{item.slug}}">{{ item.title }}</a></li>
@@ -15,6 +18,5 @@
         </ul>
       </div>
     {% endfor %}
-
-  {{ page.content }}
+  </div>
 {% endblock %}

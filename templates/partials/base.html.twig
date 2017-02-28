@@ -32,10 +32,7 @@
 
   <div id="header" >
     {% block header %}
-    <div class="horizontal-center">
-      <h1>{{ page.header.top_header|defined ('Hello World') }}</h2>
-      <p>{{ page.header.description|defined ('This is the templates default description, change it in the pages YAML header') }}</p>
-    </div>
+
     {% endblock header %}
   </div>
 

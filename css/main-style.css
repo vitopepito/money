@@ -36,17 +36,19 @@ p {
   line-height: 1.4em;
 }
 
-p + p {
+/*should go to main-position.css*/
+
+p + p, ul + p {
   margin-top: 1em;
 }
-p + ul {
+/*p + ul {
   margin-bottom: 0 !important;
-}
+}*/
 
-#content a, a:visited {
+a, a:visited {
   color: #278f94;
 }
-#content a:hover {
+a:hover {
   color: #1a5b61;
 }
 
@@ -73,7 +75,7 @@ h3 {
 
 h4 {
   font-size: 1.25em;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 h5 {
@@ -135,6 +137,14 @@ ul, ol {
 
 /*----------------------- Color Boxes ------------------------------ */
 
+.text-red {
+  color: #E33030;
+}
+
+.text-green {
+  color: #278f94;
+}
+
 .box-red {
   color: white;
   background-color: #E33030;
@@ -160,9 +170,16 @@ ul, ol {
 
 /*----------------------- Footer ------------------------------ */
 
-#footer {
-  font-weight: 300;
+#footer hr {
+  border-color: #E33030;
+}
+
+#footer p, #footer .text-field {
   color: #E33030;
+}
+
+#footer input {
+  border-color: #E33030;
 }
 
 /*----------------------- Secondary Elements ------------------------------ */
@@ -195,8 +212,23 @@ hr {
 
 .text-field {
   margin: 0.5em 0;
-  padding: 0.2em 0.5em;
+  padding: 0.5em;
   border: 1px solid #262626;
   max-width: 100%;
   width: 100%;
+}
+
+.button {
+  padding: 0.5em;
+  width: 100%;
+  text-align: center;
+  background: #E33030;
+  text-decoration: none;
+  color: white;
+  border: none;
+}
+
+input .button:hover {
+  background: #f76d6d;
+  text-decoration: none;
 }

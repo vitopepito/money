@@ -10,17 +10,19 @@ for styling only
 /*----------------------- Color Variables ------------------------------ */
 
 :root {
-  --main-base: #262626;
-  --main-light: #666666;
-  --main-ultralight: #EEEEEE;
-  --main-dark: #000;
-  --red-base: #E33030;
-  --red-light: #f76d6d;
-  --red-dark: #802a2a;
-  --green-base: #278f94;
-  --green-light: #8bc7cc;
-  --green-dark: #1a5b61;
+  --default-base: #262626;
+  --default-light: #666666;
+  --default-ultralight: #EEEEEE;
+  --default-dark: #000;
+  --hard-base: #E33030;
+  --hard-light: #f76d6d;
+  --hard-dark: #802a2a;
+  --soft-base: #278f94;
+  --soft-light: #8bc7cc;
+  --soft-dark: #1a5b61;
 }
+
+/* rename colors to: default = grey, hard = red, soft for green
 
 
 /*----------------------- General ------------------------------ */
@@ -137,26 +139,26 @@ ul, ol {
 
 /*----------------------- Color Boxes ------------------------------ */
 
-.text-red {
+.text-hard {
   color: #E33030;
 }
 
-.text-green {
+.text-soft {
   color: #278f94;
 }
 
-.box-red {
+.box-hard {
   color: white;
   background-color: #E33030;
 }
-.box-red p {
+.box-hard p {
   color: white;
 }
-.box-green {
+.box-soft {
   color: white;
   background-color: #278f94;
 }
-.box-green p {
+.box-soft p {
   color: white;
 }
 
@@ -170,7 +172,7 @@ ul, ol {
 
 /*----------------------- Footer ------------------------------ */
 
-#footer hr {
+/*#footer hr {
   border-color: #E33030;
 }
 
@@ -180,7 +182,7 @@ ul, ol {
 
 #footer input {
   border-color: #E33030;
-}
+}*/
 
 /*----------------------- Secondary Elements ------------------------------ */
 code {
@@ -218,7 +220,7 @@ hr {
   width: 100%;
 }
 
-.button {
+/*.button {
   padding: 0.5em;
   width: 100%;
   text-align: center;
@@ -231,4 +233,4 @@ hr {
 input .button:hover {
   background: #f76d6d;
   text-decoration: none;
-}
+}*/

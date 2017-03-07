@@ -13,56 +13,67 @@
 
 <article class="row">
 {% for post in collection %}
+	{# check if date is in the future #}
 	{% if date(post.header.event.date) > date() %}
 			<div class="col-xs-12 col-md-4 square horizontal-center">
-
+				{# check if cover-image exists #}
 				{% if post.media['cover-image.jpg'] %}
-					<div class="box-green box-blend" style="background-image: url({{ post.media['cover-image.jpg'].cropZoom(500,500).greyscale.url }})">
-
+					<div class="box-soft box-blend" style="background-image: url({{ post.media['cover-image.jpg'].cropZoom(500,500).greyscale.url }})">
+				{# just use first image otherwise #}
 				{% elseif post.media.images %}
 					{% set first_image = post.media.images|first %}
-					<div class="box-green box-blend" style="background-image: url({{ first_image.cropZoom(500,500).greyscale.url }})">
-
+					<div class="box-soft box-blend" style="background-image: url({{ first_image.cropZoom(500,500).greyscale.url }})">
+				{# just blank if no image at all #}
 				{% else %}
-					<div class="box-green">
+					<div class="box-soft">
 
 				{% endif %}
-
+					{# link only if there is content in the markdown post #}
+					{% if post.content %}
 					<a class="link-box" href=" {{ post.url }}"><span></span></a>
-					<h3>{{ post.title }}</h3>
+					{% endif %}
+					<h3>Upcoming: {{ post.title }}</h3>
 					<p>{{ post.header.event.date|date(dateformat) }}</p>
+					<p>{{ post.header.event.time }}</p>
+					{% if post.content %}
 					<p class="flex-bottom">
 						<span style="text-decoration:underline;">
 		        discover more
 		      	</span>
 					</p>
+					{% endif %}
 
 					</div>
 			</div>
 
+		{# for all dates which are not in the future (= in the past) #}
 		{% else %}
 			<div class="col-xs-12 col-md-4 square horizontal-center">
 
 				{% if post.media['cover-image.jpg'] %}
-					<div class="box-red box-blend" style="background-image: url({{ post.media['cover-image.jpg'].cropZoom(500,500).greyscale.url }})">
+					<div class="box-hard box-blend" style="background-image: url({{ post.media['cover-image.jpg'].cropZoom(500,500).greyscale.url }})">
 
 				{% elseif post.media.images %}
 					{% set first_image = post.media.images|first %}
-					<div class="box-red box-blend" style="background-image: url({{ first_image.cropZoom(500,500).greyscale.url }})">
+					<div class="box-hard box-blend" style="background-image: url({{ first_image.cropZoom(500,500).greyscale.url }})">
 
 				{% else %}
-					<div class="box-red">
+					<div class="box-hard">
 
 				{% endif %}
 
+					{% if post.content %}
 					<a class="link-box" href=" {{ post.url }}"><span></span></a>
+					{% endif %}
 					<h3>{{ post.title }}</h3>
 					<p>{{ post.header.event.date|date(dateformat) }}</p>
+					{% if post.content %}
 					<p class="flex-bottom">
 						<span style="text-decoration:underline;">
 		        discover more
 		      	</span>
 					</p>
+					{% endif %}
 
 					</div>
 			</div>
@@ -70,41 +81,5 @@
 	{% endif %}
 {% endfor %}
 </article>
-
-
-
-<article class="row">
-	{% for post in collection %}
-		<div class="col-xs-12 col-md-4 square horizontal-center">
-
-			{% if post.media['cover-image.jpg'] %}
-			<div class="box-red box-blend" style="background-image: url({{ post.media['cover-image.jpg'].cropZoom(500,500).greyscale.url }})">
-
-			{% elseif post.media.images %}
-			{% set first_image = post.media.images|first %}
-			<div class="box-red box-blend" style="background-image: url({{ first_image.cropZoom(500,500).greyscale.url }})">
-
-			{% else %}
-			<div class="box-red">
-
-			{% endif %}
-
-				<a class="link-box" href=" {{ post.url }}"><span></span></a>
-				<h3>{{ post.title }}</h3>
-				<p>{{ post.header.event.date|date(dateformat) }}</p>
-				<p class="flex-bottom">discover more</p>
-
-			</div>
-		</div>
-
-
-	{% endfor %}
-
-
-</article>
-
-
-
-
 
 {% endblock %}

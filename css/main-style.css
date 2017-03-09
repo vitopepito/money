@@ -49,6 +49,7 @@ p + p, ul + p {
 
 a, a:visited {
   color: #278f94;
+  font-weight: 400;
 }
 a:hover {
   color: #1a5b61;
@@ -134,6 +135,11 @@ ul, ol {
 }
 #content p {
   margin-bottom: 1em;
+}
+
+.banner {
+  text-align: center;
+  padding: 1.5em;
 }
 
 

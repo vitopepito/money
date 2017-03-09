@@ -102,7 +102,7 @@ input[type=checkbox]:checked ~ #show-pages {
 
 #content {
   max-width: 960px;
-  margin: 2em auto;
+  margin: 1em auto;
   padding: 0 1em;
 }
 

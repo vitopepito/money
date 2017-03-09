@@ -27,7 +27,7 @@ for styling only
 
 /*----------------------- General ------------------------------ */
 
-body, p, input {
+body, input {
   font-family: 'Lato', Helvetica, Arial, sans-serif;
   font-size: 1em;
   font-weight: 300;
@@ -139,6 +139,18 @@ ul, ol {
 
 /*----------------------- Color Boxes ------------------------------ */
 
+/*should go to main-style*/
+.block--color-hard {
+  color: white;
+  background-color: #E33030;
+}
+.block--color-soft {
+  color: white;
+  background-color: #278f94;
+}
+
+
+
 .text-hard {
   color: #E33030;
 }
@@ -147,7 +159,7 @@ ul, ol {
   color: #278f94;
 }
 
-.box-hard {
+/*.box-hard {
   color: white;
   background-color: #E33030;
 }
@@ -160,7 +172,7 @@ ul, ol {
 }
 .box-soft p {
   color: white;
-}
+}*/
 
 .box-blend {
   background-blend-mode: soft-light;

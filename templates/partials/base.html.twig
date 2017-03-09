@@ -13,9 +13,9 @@
     #}
 
     {% block stylesheets %}
-    {% do assets.addCss('theme://css/main-position.css', 101) %}
-    {% do assets.addCss('theme://css/main-grid.css', 102) %}
-    {% do assets.addCss('theme://css/main-style.css', 103) %}
+    {% do assets.addCss('theme://css/main-position.css') %}
+    {% do assets.addCss('theme://css/main-grid.css') %}
+    {% do assets.addCss('theme://css/main-style.css') %}
     {% endblock %}
     {{ assets.css() }}
 

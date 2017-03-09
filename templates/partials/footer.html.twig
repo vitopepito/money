@@ -2,7 +2,7 @@
 <hr>
 <div class="row">
 
-  <div class="col-xs-12 col-md-3">
+  <div class="col-xs-12 col-sm-6 col-md-3">
     <p>
       {% for page in pages.children.visible %}
       <a class="{{ current_page }} {{ page.slug }}" href="{{ page.url }}">{{ page.menu }}</a><br />
@@ -10,7 +10,7 @@
     </p>
   </div>
 
-  <div class="col-xs-12 col-md-3">
+  <div class="col-xs-12 col-sm-6 col-md-3">
     {% if site.address %}
       <p>{{ site.address.name }}<br />
         {{ site.address.street }}<br />
@@ -20,14 +20,14 @@
     {% endif %}
   </div>
 
-  <div class="col-xs-12 col-md-3">
+  <div class="col-xs-12 col-sm-6 col-md-3">
     <p>contact us: <br />
       <a href="mailto:{{ site.author.email|safe_email }}">
       {{ site.author.email|safe_email }}
       </a></p>
   </div>
 
-  <div class="col-xs-12 col-md-3">
+  <div class="col-xs-12 col-sm-6 col-md-3">
     <!-- Begin MailChimp Signup Form -->
       <div id="mc_embed_signup">
       <form action="//google.us14.list-manage.com/subscribe/post?u=80723f51c9a7a04e85a51bd95&amp;id=872cfc7a8e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>

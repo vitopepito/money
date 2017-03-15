@@ -1,11 +1,11 @@
 <div class="topics row align-center">
 
-  {% for p in page.find('/kb').children if p != page %}
-    <div class="col-xs-12 col-md-5">
-      <h5>
+  {% for p in page.find('/knowledge-base/kb').children if p != page %}
+    <div class="col-xs-12 col-md-5 kb__title">
+      <h6>
         <a href="{{ p.url }}">{{ p.title }}</a>
-      </h5>
-      <ul>
+      </h6>
+      <ul class="kb__list">
         {% for item in p.collection %}
         <li><a href="{{ p.url }}#{{item.slug}}">{{ item.title }}</a></li>
         {% endfor %}

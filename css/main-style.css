@@ -35,7 +35,7 @@ body, input {
 }
 
 p {
-  line-height: 1.4em;
+  line-height: 1.5em;
 }
 
 /*should go to main-position.css*/
@@ -49,10 +49,13 @@ p + p, ul + p {
 
 a, a:visited {
   color: #278f94;
-  font-weight: 400;
+  font-weight: 300;
+  text-decoration: none;
+  border-bottom: 1px solid #278f94;
 }
 a:hover {
-  color: #1a5b61;
+  color: #8bc7cc;
+  border-bottom: 1px solid #8bc7cc;
 }
 
 b, optgroup, strong {
@@ -62,48 +65,54 @@ b, optgroup, strong {
 h1 {
   font-size: 2em;
   font-weight: 900;
-  letter-spacing: 0.025em;
+  letter-spacing: 0.04em;
 }
 
 h2 {
   font-size: 2em;
   font-weight: 300;
+  letter-spacing: 0.04em;
 }
 
 h3 {
   font-size: 1.25em;
   font-weight: 900;
-  letter-spacing: 0.025em;
+  letter-spacing: 0.04em;
 }
 
 h4 {
   font-size: 1.25em;
   font-weight: 300;
+  letter-spacing: 0.04em;
 }
 
 h5 {
   font-size: 1em;
   font-weight: 900;
-  letter-spacing: 0.025em;
+  letter-spacing: 0.04em;
 }
 
 h6 {
   font-size: 1em;
   font-weight: 300;
+  letter-spacing: 0.04em;
 }
 
-ul, ol {
+/*ul, ol {
   margin-left: 1.25em;
-}
+}*/
+
+
 
 /*----------------------- Navigation ------------------------------ */
 
 #navigation, #navigation ul li, #navigation a {
   text-decoration: none;
+  border: none;
   list-style: none;
   list-style-type: none;
   font-weight: 300;
-  color: #262626;
+  color: #278f94;
   line-height: 1.8em;
 }
 
@@ -116,8 +125,8 @@ ul, ol {
 }
 
 #navigation .nav-pages a:hover {
-  color: #000;
-  text-decoration: underline;
+  color: #8bc7cc;
+  border: none;
 }
 
 /*----------------------- Content ------------------------------ */
@@ -142,6 +151,33 @@ ul, ol {
   padding: 1.5em;
 }
 
+/* list styling */
+
+#content ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+  line-height: 1.5em;
+}
+#content li {
+  padding-left: 1em;
+  text-indent: -1em;
+}
+
+#content li:before {
+  content: "▹";
+  font-size: 1em;
+  padding-right: 0.5em;
+  vertical-align: +10%;
+  color: #E33030;
+}
+
+/* knowledge base styles */
+.kb__title {}
+
+.kb__list li a {
+  border: none;
+}
 
 /*----------------------- Color Boxes ------------------------------ */
 

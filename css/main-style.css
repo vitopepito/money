@@ -58,6 +58,10 @@ a:hover {
   border-bottom: 1px solid #8bc7cc;
 }
 
+.block__content a.link-box, .block__content a.link-box:visited, .block__content a.link-box:hover {
+  border: none;
+}
+
 b, optgroup, strong {
   font-weight: 900;
 }

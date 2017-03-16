@@ -19,7 +19,7 @@ html {
 
  /*----------------------- Navigation ------------------------------ */
 
-#navigation {
+.nav.nav__wrapper {
   max-width: 960px;
   margin: 0 auto;
   padding: 0.5em 1em 0 1em;
@@ -27,26 +27,50 @@ html {
   display: -webkit-flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
-
+  line-height: 1.8em;
 }
 
-#navigation .nav-pages {
-  margin-left: auto;
+.nav__titles {
+  position: relative;
+}
+
+.nav__title-logo {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+}
+
+.nav__title-text {
+  display: inline-block;
+  margin-left: 2em;
+  padding: 0 0.5em;
+}
+
+/* mobile first styles */
+
+.nav__links {
+  /*margin-left: 0;*/
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.nav__links-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav__link {
+  /*padding: 0.2em 0;*/
   text-align: right;
 }
 
-.nav-title div {
-  display: inline-block;
-}
-
-#logo {
-  width: 2em;
-  vertical-align: middle;
-
+.nav__toggle {
+  text-align: right;
 }
 
 
-/*pages dropdown inactive on mobile per default*/
+/*mobile first: show pages only on large screens*/
 #show-pages {
   display: none;
 }
@@ -56,35 +80,41 @@ input[type=checkbox]{
     display: none;
 }
 
-/*Show menu when invisible checkbox is checked*/
+/*Show pages when invisible checkbox is checked*/
 input[type=checkbox]:checked ~ #show-pages {
-    display: block;
+    display: flex;
 }
 
-/*Arrangement on larger displays*/
+/* Arrangement on larger displays */
 
 @media screen and (min-width: 35em) {
   #show-pages {
-    display: inline-block;
+    display: flex;
   }
-  .nav-toggle {
+  .nav__toggle {
     display: none;
   }
-  #navigation .nav-pages {
-    margin-left: 0;
+  .nav__links {
+    /*margin-left: 0;*/
     flex-grow: 1;
-    text-align: left;
   }
-  #show-pages {
+  .nav__links-list {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+  /*#show-pages {
     width: 100%;
     margin-left: 1em;
-  }
-  #show-pages li {
-    display: inline-block;
+    }*/
+
+  .nav__link {
+    /*display: inline-block;*/
     padding: 0 0.5em;
   }
-  #navigation .nav-right {
-    float: right;
+  .nav__link--right {
+    /*float: right;*/
+    margin-left: auto;
     text-align: right;
   }
 }
@@ -146,7 +176,9 @@ input[type=checkbox]:checked ~ #show-pages {
 
 /*----------------------- Old Blocks ------------------------------ */
 
-/*.square {
+/* remove all this later - nando 170315
+
+.square {
   height: auto;
   position: relative;
 }
@@ -167,7 +199,6 @@ input[type=checkbox]:checked ~ #show-pages {
   flex-direction: column;
 }
 
-/* probably remove this again - nando 170219 */
 .square > img {
   position: absolute;
   left: 0;
@@ -188,9 +219,9 @@ a.link-box span {
 
   z-index: 1;
 }
-a.link-box {
+/*a.link-box {
   border: none;
-}
+}*/
 
 /*----------------------- Alignements ------------------------------ */
 

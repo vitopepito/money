@@ -21,7 +21,7 @@
   </div>
 
   <div class="col-xs-12 col-sm-6 col-md-3">
-    <p>contact us: <br />
+    <p>contact: <br />
       <a href="mailto:{{ site.author.email|safe_email }}">
       {{ site.author.email|safe_email }}
       </a></p>
@@ -57,7 +57,8 @@
     <br />
     <br />
     <p>
-    <img src="{{ url('theme://images/logo.png') }}">
+    {{ page.find('/images').media['logo.png'].cropResize(120, 120).html('moneynotlove', 'moneynotlove') }}
+    <!-- <img src="{{ page.find('/images').media['logo.png'].cropResize(150, 150).url }}"> -->
     </p>
     <p class="text-hard">{{ config.site.title }}</p>
   </div>

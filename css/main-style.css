@@ -106,28 +106,41 @@ h6 {
 
 /*----------------------- Navigation ------------------------------ */
 
-#navigation, #navigation ul li, #navigation a {
-  text-decoration: none;
-  border: none;
+#navigation .nav__links li {
   list-style: none;
   list-style-type: none;
+}
+
+#navigation .nav__links a {
+  text-decoration: none;
+  border: none;
   font-weight: 300;
   color: #278f94;
-  line-height: 1.8em;
+  /*line-height: 1.8em;*/
 }
 
-#navigation .nav-title {
-  color: #E33030;
-}
-
-#navigation .active {
-  font-weight: 900;
-}
-
-#navigation .nav-pages a:hover {
+#navigation .nav__links a:hover {
   color: #8bc7cc;
   border: none;
 }
+
+#navigation .nav__title-text {
+  color: #E33030;
+}
+
+#navigation .nav__toggle {
+  color: #278f94;
+}
+
+#navigation .nav__toggle:hover {
+  color: #8bc7cc;
+}
+
+#navigation a.active {
+  font-weight: 900;
+}
+
+
 
 /*----------------------- Content ------------------------------ */
 

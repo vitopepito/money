@@ -5,7 +5,7 @@
   {{ page.content }}
 
   {% for topic in page.collection %}
-    <h3 id="{{ topic.slug }}">{{ topic.title }}</h3>
+    <h3 id="{{ topic.slug }}" class="text-soft">{{ topic.title }}</h3>
     {{ topic.content }}
     <br />
   {% endfor %}

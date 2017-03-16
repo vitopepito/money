@@ -1,49 +1,42 @@
-<div id="navigation">
+<div id="navigation" class="nav nav__wrapper">
 
-  <div class="nav-title">
-    <div><img id="logo" src="{{ url('theme://images/logo.png') }}"></div>
-    <div>{{ config.site.title }}</div>
+  <div class="nav__titles">
+    <div class="nav__title-logo"><img id="logo" src="{{ page.find('/images').media['logo.png'].cropResize(28, 28).url }}"></div>
+    <div class="nav__title-text">{{ config.site.title }}</div>
   </div>
 
-  <div class="nav-pages">
-    <label class="nav-toggle" for="show-menu">menu</label>
+  <div class="nav__links">
+    <label class="nav__toggle" for="show-menu">menu</label>
     <input type="checkbox" id="show-menu" role="button">
-    <ul id="show-pages">
+    <ul id="show-pages" class="nav__links-list">
       {% for page in pages.children.visible %}
       {% set current_page = (page.active or page.activeChild) ? 'active' : '' %}
-        <li><a class="{{ current_page }} {{ page.slug }}" href="{{ page.url }}">{{ page.menu }}</a></li>
+        <li class="nav__link"><a class="{{ current_page }} {{ page.slug }}" href="{{ page.url }}">{{ page.menu }}</a></li>
       {% endfor %}
 
-      <li class="nav-right"><a href="#">search</a></li>
+      <li class="nav__link nav__link--right"><a href="#">english</a></li>
     </ul>
   </div>
 </div>
 
 {#
-<input type="checkbox" id="show-menu" role="button">
-<ul class="nav-title">
-  <li><img class="pure-img" id="logo" src="{{ url('theme://images/logo.png') }}"></li>
-    <li>
-      <a>{{ config.site.title }}</a>
-    </li>
-</ul>
-<ul class="nav-toggle">
-  <li>
-    <label for="show-menu">menu
-    </label>
-  </li>
-</ul>
-<ul class="nav-pages" id="show-pages">
+<nav id="navigation" class="nav nav__wrapper">
 
-  {% for page in pages.children.visible %}
-  {% set current_page = (page.active or page.activeChild) ? 'active' : '' %}
+  <div class="nav__titles">
+    <div class="nav__title-logo"><img id="logo" src="../images/logo.png" height="25px"></div>
+    <div class="nav__title-text">moneynotlove</div>
+  </div>
 
-  <li><a class="{{ current_page }} {{ page.slug }}" href="{{ page.url }}">
-    {{ page.menu }}
-  </a></li>
-  {% endfor %}
+  <div class="nav__links">
+    <label class="nav__toggle nav__link--right" for="show-menu">menu</label>
+    <input type="checkbox" id="show-menu" role="button">
+    <ul id="show-pages" class="nav__links-list">
+      <li class="nav__link"><a>About Us</a></li>
+      <li class="nav__link"><a class="active">Knowledge Base</a></li>
+      <li class="nav__link"><a>Round Table</a></li>
 
-  <li class="nav-search"><a href="#">search</a></li>
-
-</ul>
+      <li class="nav__link nav__link--right"><a href="#">search</a></li>
+    </ul>
+  </div>
+</nav>
 #}

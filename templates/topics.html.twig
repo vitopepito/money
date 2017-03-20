@@ -1,0 +1,13 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+
+  {{ page.content }}
+
+  {% for topic in page.collection %}
+    <h3 id="{{ topic.slug }}" class="text-soft">{{ topic.title }}</h3>
+    {{ topic.content }}
+    <br />
+  {% endfor %}
+
+{% endblock %}

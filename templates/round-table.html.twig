@@ -1,5 +1,108 @@
 {% extends 'partials/base.html.twig' %}
 
 {% block content %}
-	{{ page.content }}
+
+{{ page.content }}
+
+
+{# {% set dateformat = admin.page.dateformat ?: config.system.pages.dateformat.long ?: "j F Y" %}  #}
+{# j = day without leading zero, F = full word Month, Y = four digit year #}
+
+{# 	create 'upcoming' heading only once? #}
+{# {% set upcoming = posts in collection if date(upcoming.header.event.date) > date() %} #}
+
+{# change to new block css #}
+{# change to filter by page.date instead of page.header.event.date for easier filtering #}
+
+{% set archive = page.collection() %}
+{% set upcoming = page.collection('upcoming') %}
+
+{% if upcoming %}
+<article>
+<h1 class="text-soft">Upcoming</h1>
+	<div class="row">
+	{% for post in upcoming %}
+		<div class="col-xs-12 col-sm-6 col-md-4 block--wrapper">
+			<div class="block__one-by-one"></div>
+
+			{# check if cover-image exists #}
+			{% if post.media['cover-image.jpg'] %}
+				<div class="block__content block__content--flex block--color-soft horizontal-center box-blend" style="background-image: url({{ post.media['cover-image.jpg'].cropZoom(500,500).grayscale.brightness(-50).url }})">
+			{# just use first image otherwise #}
+			{% elseif post.media.images %}
+				{% set first_image = post.media.images|first %}
+				<div class="block__content block__content--flex block--color-soft horizontal-center box-blend" style="background-image: url({{ first_image.cropZoom(500,500).grayscale.brightness(-50).url }})">
+			{% else %}
+				<div class="block__content block__content--flex block--color-soft horizontal-center">
+			{% endif %}
+
+			{# content text #}
+			{% if post.content %}
+				<a class="link-box" href=" {{ post.url }}"><span></span></a>
+			{% endif %}
+			<h3>{{ post.title }}</h3>
+			<p>{{ post.header.event.start|date(dateformat) }}</p>
+			<p>{{ post.header.event.time }}</p>
+			{% if post.content %}
+				<p class="flex-bottom">
+					<span style="text-decoration:underline;">
+					discover more
+					</span>
+				</p>
+			{% endif %}
+			</div>
+			<!-- end content -->
+		</div>
+		<!-- end col -->
+	{% endfor %}
+	</div>
+</article>
+{% endif %}
+
+<br />
+<br />
+
+{% if archive %}
+<article>
+<h1 class="text-hard">Archive</h1>
+	<div class="row">
+	{% for post in archive %}
+		<div class="col-xs-12 col-sm-6 col-md-4 block--wrapper">
+			<div class="block__one-by-one"></div>
+
+			{# check if cover-image exists #}
+			{% if post.media['cover-image.jpg'] %}
+				<div class="block__content block__content--flex block--color-hard horizontal-center box-blend" style="background-image: url({{ post.media['cover-image.jpg'].cropZoom(500,500).grayscale.brightness(-50).url }})">
+			{# just use first image otherwise #}
+			{% elseif post.media.images %}
+				{% set first_image = post.media.images|first %}
+				<div class="block__content block__content--flex block--color-hard horizontal-center box-blend" style="background-image: url({{ first_image.cropZoom(500,500).grayscale.brightness(-50).url }})">
+			{% else %}
+				<div class="block__content block__content--flex block--color-hard horizontal-center">
+			{% endif %}
+
+			{# content text #}
+			{% if post.content %}
+				<a class="link-box" href=" {{ post.url }}"><span></span></a>
+			{% endif %}
+			<h3>{{ post.title }}</h3>
+			<p>{{ post.header.event.start|date(dateformat) }}</p>
+			<p>{{ post.header.event.time }}</p>
+			{% if post.content %}
+				<p class="flex-bottom">
+					<span style="text-decoration:underline;">
+					discover more
+					</span>
+				</p>
+			{% endif %}
+			</div>
+			<!-- end content -->
+		</div>
+		<!-- end col -->
+	{% endfor %}
+	</div>
+</article>
+{% endif %}
+
+
 {% endblock %}

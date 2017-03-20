@@ -4,45 +4,40 @@
 <head>
   {% block head %}
     <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% if header.title %}{{ header.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
     <link rel="icon" type="image/png" href="{{ url('theme://images/logo.png') }}" />
     <link rel="canonical" href="{{ page.url(true, true) }}" />
+    {#
     <link href="http://fonts.googleapis.com/css?family=Lato:400,400,300,900" rel="stylesheet" type="text/css">
+    #}
 
     {% block stylesheets %}
-      {% do assets.addCss('theme://css/standardize.css', 103) %}
-      {% do assets.addCss('theme://css/index-grid.css', 102) %}
-      {% do assets.addCss('theme://css/index.css', 101) %}
+    {% do assets.addCss('theme://css/main-position.css') %}
+    {% do assets.addCss('theme://css/main-grid.css') %}
+    {% do assets.addCss('theme://css/main-style.css') %}
     {% endblock %}
     {{ assets.css() }}
+
   {% endblock head %}
 </head>
 
 
-<body class="body page-index clearfix">
-  <div class="menu clearfix">
-    {% block navigation %}
-    {#
-    <img class="logo" src="{{ url('theme://images/logo.png') }}">
-    <p class="_text _text-1">{{ config.site.title }}</p>
-    <p class="_text _text-2">ABOUT US</p>
-    <p class="_text _text-3">VISIT OUR ROUND TABLE</p>
-    <p class="_text _text-4">SEARCH</p>
-    #}
-    {% endblock navigation %}
+<body id="body">
+
+  {% block navigation %}
+    {% include 'partials/navigation.html.twig' %}
+  {% endblock navigation %}
+
+  <div id="content">
+    {% block content %}
+      {{ page.content }}
+    {% endblock content %}
   </div>
 
-  <div class="title clearfix">
-    {% block title %}
-    <h2 class="_text _text-5">The Creative's&nbsp;<br>Knowledge Base</h2>
-    <p class="_text _text-6">We provide information for creative freelancers in Switzerland</p>
-    {% endblock title %}
-  </div>
+  {% block footer %}
+    {% include 'partials/footer.html.twig' %}
+  {% endblock footer %}
 
-  {% block content %}
-
-
-  {% endblock content %}
 </body>
 </html>

@@ -1,0 +1,150 @@
+<!doctype html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>moneynotlove | styles</title>
+    <link rel="icon" type="image/png" href="{{ url('theme://images/logo.png') }}" />
+    <link rel="canonical" href="{{ page.url(true, true) }}" />
+
+    <link rel="stylesheet" href="css/main-position.css" />
+    <link rel="stylesheet" href="css/main-grid.css" />
+    <link rel="stylesheet" href="css/main-style.css" />
+
+</head>
+
+
+<body id="body">
+  <div id="navigation">
+
+    <div class="nav-title">
+      <div><img id="logo" src="themes/money/images/logo.png"></div>
+      <div>moneynotlove</div>
+    </div>
+
+    <div class="nav-pages">
+      <label class="nav-toggle" for="show-menu">menu</label>
+      <input type="checkbox" id="show-menu" role="button">
+      <ul id="show-pages">
+        <li><a>About Us</a></li>
+        <li><a class="active">Knowledge Base</a></li>
+        <li><a>Round Table</a></li>
+
+        <li class="nav-right"><a href="#">search</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="header">
+
+    <div class="horizontal-center">
+      <h1>Styles Cheatsheet</h2>
+      <p>Start here if you want to write content for moneynotlove using the grav CMS</p>
+    </div>
+
+  </div>
+
+<div id="content">
+  <div class="row">
+    <div class="col-xs-12 col-md-4">
+      <p>
+        These are three blocks of text, evenly spread out horizontally using the class="even border" in a div tag to give it a border.
+      </p>
+    </div>
+    <div class="col-xs-12 col-md-4">
+      <p>
+        These are three blocks of text, evenly spread out horizontally using the class="even border" in a div tag to give it a border.
+      </p>
+    </div>
+    <div class="col-xs-12 col-md-4">
+      <p>
+        These are three blocks of text, evenly spread out horizontally using the class="even border" in a div tag to give it a border.
+      </p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12 col-md-4">
+      <div class="border">
+        <p>
+          same boxes with a border
+        </p>
+      </div>
+    </div>
+    <div class="col-xs-12 col-md-4">
+      <div class="border">
+        same boxes with a border
+      </div>
+    </div>
+    <div class="col-xs-12 col-md-4">
+      <div class="border">
+        <p>Same box again. </p>
+        <p>But this time with mutliple lines. </p>
+      </div>
+    </div>
+    <div class="col-xs-12 col-md-4">
+      <div class="border">
+        <p>Same box again. </p>
+        <p>But this time with mutliple lines. </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-6">
+      regular column is left-aligned
+    </div>
+    <div class="col-xs-6 align-right">
+      with the class="align-right" this happens ->
+    </div>
+  </div>
+
+  <h4>H4 Headline to use in content block</h3>
+  <p>
+    The main titles (above) use H1. The <a href="#">content block</a> that we are in now, however, uses only H4 as titles.
+  </p>
+  <p>
+    This is how you define headings in markdown when editing the pages:
+  </p>
+  <pre><code class="language-markdown">
+# h1 Heading
+## h2 Heading
+### h3 Heading
+#### h4 Heading
+##### h5 Heading
+###### h6 Heading
+  </code></pre>
+
+  <h4>Lists</h4>
+  <p>
+    Now a list will follow:
+  </p>
+  <ul>
+    <li>
+      This is a simple unordered list
+    </li>
+    <li>
+      With a few
+    </li>
+    <li>
+      Items
+    </li>
+  </ul>
+  <h4>Bold and Italics</h4>
+  <p>
+    It is possible to make text <strong>bold</strong> or <em>italic</em> as well as <del>strikethrough</del> with the following syntax in markdown:
+  </p>
+  <pre><code class="language-markdown">
+It is possible to make text __bold__ or _italic_ as well as ~~strikethrough~~ with the following syntax in markdown:
+  </code></pre>
+
+</div>
+
+
+  <div id="footer">
+    <p>moneynotlove | Sihlquai 125 | 8005 Zürich</p>
+  </div>
+
+</body>
+</html>

@@ -8,11 +8,8 @@
 {# {% set dateformat = admin.page.dateformat ?: config.system.pages.dateformat.long ?: "j F Y" %}  #}
 {# j = day without leading zero, F = full word Month, Y = four digit year #}
 
-{# 	create 'upcoming' heading only once? #}
-{# {% set upcoming = posts in collection if date(upcoming.header.event.date) > date() %} #}
-
-{# change to new block css #}
-{# change to filter by page.date instead of page.header.event.date for easier filtering #}
+{# Use custom dateformat instead of the configured one #}
+{% set dateformat = "j. F Y, H:i" %}
 
 {% set archive = page.collection() %}
 {% set upcoming = page.collection('upcoming') %}
@@ -41,8 +38,13 @@
 				<a class="link-box" href=" {{ post.url }}"><span></span></a>
 			{% endif %}
 			<h3>{{ post.title }}</h3>
+			<p>
+				{{ post.date|date(dateformat) }}
+			</p>
+			{# replaced
 			<p>{{ post.header.event.start|date(dateformat) }}</p>
 			<p>{{ post.header.event.time }}</p>
+			#}
 			{% if post.content %}
 				<p class="flex-bottom">
 					<span style="text-decoration:underline;">

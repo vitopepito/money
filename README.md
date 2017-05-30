@@ -6,7 +6,7 @@ developing the theme to suit our needs, using:
 - http://twig.sensiolabs.org as the template engine
 - http://www.meetsally.com for the responsive flexbox
 
-the page content will also be opensourced in the future, but in another repository
+the page content is outsourced in another repository. 
 
-check the live page at https://beta.moneynotlove.ch/grav <br>
-there is a https://beta.moneynotlove.ch/grav/cheatsheet with all available markdown styles
+check the live page at https://moneynotlove.ch/grav <br>
+there is a https://moneynotlove.ch/grav/cheatsheet with all available markdown styles

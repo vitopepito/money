@@ -196,9 +196,10 @@ h6 {
   border: none;
 }
 
+
+
 /*----------------------- Color Boxes ------------------------------ */
 
-/*should go to main-style*/
 .block--color-hard {
   color: white;
   background-color: #E33030;
@@ -209,7 +210,6 @@ h6 {
 }
 
 
-
 .text-hard {
   color: #E33030;
 }
@@ -218,20 +218,22 @@ h6 {
   color: #278f94;
 }
 
-/*.box-hard {
-  color: white;
-  background-color: #E33030;
+.button {
+  padding: 0.75em 0.75em 0.25em 0.75em;
+  display: inline-block;
 }
-.box-hard p {
-  color: white;
+
+.button:hover {
+  -webkit-box-shadow: 2px 2px 0px 0px #262626;
+  -moz-box-shadow: 2px 2px 0px 0px #262626;
+  box-shadow: 2px 2px 0px 0px #262626;
 }
-.box-soft {
-  color: white;
-  background-color: #278f94;
+
+a.button--link {
+  text-decoration: none;
+  border: none;
+  color: inherit;
 }
-.box-soft p {
-  color: white;
-}*/
 
 .box-blend {
   background-blend-mode: soft-light;
@@ -241,19 +243,6 @@ h6 {
 }
 
 
-/*----------------------- Footer ------------------------------ */
-
-/*#footer hr {
-  border-color: #E33030;
-}
-
-#footer p, #footer .text-field {
-  color: #E33030;
-}
-
-#footer input {
-  border-color: #E33030;
-}*/
 
 /*----------------------- Secondary Elements ------------------------------ */
 code {
@@ -290,18 +279,3 @@ hr {
   max-width: 100%;
   width: 100%;
 }
-
-/*.button {
-  padding: 0.5em;
-  width: 100%;
-  text-align: center;
-  background: #E33030;
-  text-decoration: none;
-  color: white;
-  border: none;
-}
-
-input .button:hover {
-  background: #f76d6d;
-  text-decoration: none;
-}*/

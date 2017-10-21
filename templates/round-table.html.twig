@@ -88,8 +88,13 @@
 				<a class="link-box" href=" {{ post.url }}"><span></span></a>
 			{% endif %}
 			<h3>{{ post.title }}</h3>
+			<p>
+				{{ post.date|date(dateformat) }}
+			</p>
+			{# replaced
 			<p>{{ post.header.event.start|date(dateformat) }}</p>
 			<p>{{ post.header.event.time }}</p>
+			#}
 			{% if post.content %}
 				<p class="flex-bottom">
 					<span style="text-decoration:underline;">

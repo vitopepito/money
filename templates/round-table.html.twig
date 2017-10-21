@@ -5,16 +5,15 @@
 {{ page.content }}
 
 
-{# {% set dateformat = admin.page.dateformat ?: config.system.pages.dateformat.long ?: "j F Y" %}  #}
-{# j = day without leading zero, F = full word Month, Y = four digit year #}
-
 {# Use custom dateformat instead of the configured one #}
+{# j = day without leading zero, F = full word Month, Y = four digit year #}
 {% set dateformat = "j. F Y, H:i" %}
 
 {% set archive = page.collection() %}
 {% set upcoming = page.collection('upcoming') %}
 
-{% if upcoming %}
+
+
 <article>
 <h1 class="text-soft">Upcoming</h1>
 	<div class="row">
@@ -59,12 +58,12 @@
 	{% endfor %}
 	</div>
 </article>
-{% endif %}
+
 
 <br />
 <br />
 
-{% if archive %}
+
 <article>
 <h1 class="text-hard">Archive</h1>
 	<div class="row">
@@ -109,7 +108,7 @@
 	{% endfor %}
 	</div>
 </article>
-{% endif %}
+
 
 
 {% endblock %}

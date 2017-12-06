@@ -197,53 +197,6 @@ h6 {
 }
 
 
-
-/*----------------------- Color Boxes ------------------------------ */
-
-.block--color-hard {
-  color: white;
-  background-color: #E33030;
-}
-.block--color-soft {
-  color: white;
-  background-color: #278f94;
-}
-
-
-.text-hard {
-  color: #E33030;
-}
-
-.text-soft {
-  color: #278f94;
-}
-
-.button {
-  padding: 0.75em 0.75em 0.25em 0.75em;
-  display: inline-block;
-}
-
-.button:hover {
-  -webkit-box-shadow: 2px 2px 0px 0px #262626;
-  -moz-box-shadow: 2px 2px 0px 0px #262626;
-  box-shadow: 2px 2px 0px 0px #262626;
-}
-
-a.button--link {
-  text-decoration: none;
-  border: none;
-  color: inherit;
-}
-
-.box-blend {
-  background-blend-mode: soft-light;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-
-
 /*----------------------- Secondary Elements ------------------------------ */
 code {
   color: #262626;
@@ -270,6 +223,72 @@ hr {
   border: 1px solid #f3f3f3;
 }
 
+
+
+/*----------------------- Color Boxes ------------------------------ */
+
+.block--color-hard {
+  color: white;
+  background-color: #E33030;
+}
+.block--color-soft {
+  color: white;
+  background-color: #278f94;
+}
+
+
+.text-hard {
+  color: #E33030;
+}
+
+.text-soft {
+  color: #278f94;
+}
+
+
+.box-blend {
+  background-blend-mode: soft-light;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+
+/*----------------------- Buttons ------------------------------ */
+
+.button {
+  font-family: 'Lato', Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  font-weight: 300;
+  padding: 0.5em;
+  display: inline-block;
+  border: none;
+  border-radius: 0px;
+}
+
+
+.button.button-large {
+  padding: 0.5em;
+  font-size: 1.25em;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+}
+
+.button:hover {
+  -webkit-box-shadow: 2px 2px 0px 0px #802a2a;
+  -moz-box-shadow: 2px 2px 0px 0px #802a2a;
+  box-shadow: 2px 2px 0px 0px #802a2a;
+}
+
+a.button--link {
+  text-decoration: none;
+  border: none;
+  color: inherit;
+}
+
+
+
+
 /*----------------------- Form ------------------------------ */
 
 .text-field {
@@ -278,4 +297,21 @@ hr {
   border: 1px solid #262626;
   max-width: 100%;
   width: 100%;
+}
+
+form {
+  margin-top: 2em;
+}
+
+form .form-field {
+  padding-bottom: 1em;
+}
+
+form .form-field .form-label {
+  padding-bottom: 0.25em;
+}
+
+form .form-field .form-data .form-input-wrapper input {
+  padding: 0.5em;
+  border: 1px solid #262626;
 }

@@ -311,7 +311,7 @@ form .form-field .form-label {
   padding-bottom: 0.25em;
 }
 
-form .form-field .form-data .form-input-wrapper input {
+form .form-input-wrapper input {
   padding: 0.5em;
   border: 1px solid #262626;
 }

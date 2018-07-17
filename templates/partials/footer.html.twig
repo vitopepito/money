@@ -8,6 +8,9 @@
       <a class="{{ current_page }} {{ page.slug }}" href="{{ page.url }}">{{ page.menu }}</a><br />
       {% endfor %}
     </p>
+    <p>
+      <a href="{{ page.find('/privacy').url }}">{{ page.find('/privacy').title }}</a>
+    </p>
   </div>
 
   <div class="col-xs-12 col-sm-6 col-md-4">

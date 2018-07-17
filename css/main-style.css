@@ -311,7 +311,23 @@ form .form-field .form-label {
   padding-bottom: 0.25em;
 }
 
-form .form-input-wrapper input {
+form .form-field input[type=text] {
+  margin: 0.5em 0;
   padding: 0.5em;
   border: 1px solid #262626;
+  max-width: 100%;
+  width: 100%;
 }
+
+form .form-field input[type=email] {
+  margin: 0.5em 0;
+  padding: 0.5em;
+  border: 1px solid #262626;
+  max-width: 100%;
+  width: 100%;
+}
+
+/* form .form-input-wrapper input {
+  padding: 0.5em;
+  border: 1px solid #262626;
+} */

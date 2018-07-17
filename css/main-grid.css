@@ -33,6 +33,9 @@ html, body {
     justify-content: center; }
   .row.align-right {
     justify-content: flex-end; }
+  .row.space-between {
+    justify-content: space-between;
+  }
 
 /* adding align-right on the same horizontal row - nando */
 [class*="col"].align-right {

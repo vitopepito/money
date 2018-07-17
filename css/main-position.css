@@ -136,6 +136,10 @@ input[type=checkbox]:checked ~ #show-pages {
   padding: 2em 1em;
 }
 
+#content img, #content p img {
+  width: 100%;
+}
+
 
 /*----------------------- Footer ------------------------------ */
 

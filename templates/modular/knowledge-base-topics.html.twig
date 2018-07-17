@@ -1,6 +1,6 @@
 <div class="topics row align-center">
 
-  {% for p in page.find('/knowledge-base/kb').children if p != page %}
+  {% for p in page.find('/knowledge-base/kb').children.visible if p != page %}
     <div class="col-xs-12 col-md-5 kb__title">
       <h6>
         <a href="{{ p.url }}">{{ p.title }}</a>
